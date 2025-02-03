@@ -31,4 +31,3 @@ class Command(BaseCommand):
         else:
             user.objects.create_superuser(email=email, password=password)
             self.stdout.write(f"Superuser {email} created successfully.")
-
