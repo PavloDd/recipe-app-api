@@ -30,7 +30,7 @@ class Command(BaseCommand):
             self.stdout.write(f"Superuser with email {email} already exists.")
         elif user_with_same_email and not user.is_superuser:
             self.stdout.write(f"A user "
-                              f"with email {email} exists but is not a superuser.")
+                              f"with email {email} exists but isn`t a superuser.")
         else:
             user.objects.create_superuser(email=email, password=password)
             self.stdout.write(f"Superuser {email} created successfully.")
